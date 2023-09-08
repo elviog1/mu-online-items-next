@@ -34,11 +34,11 @@
   }
   
   .animate-slide-left {
-    animation: slide-left 1.5s ease-in-out;
+    animation: slide-left 2s ease-in-out;
   }
   .animate-slide-right {
-    animation: slide-right 1.5s ease-in-out;
+    animation: slide-right 2s ease-in-out;
   }
   .animate-slide-down {
-    animation: slide-down 1.5s ease-in-out;
+    animation: slide-down 2s ease-in-out;
   }

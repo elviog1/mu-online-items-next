@@ -7,14 +7,6 @@ export default function SearchItems({ items }) {
   const [selectedCharacter, setSelectedCharacter] = useState("");
   const [selectedSet, setSelectedSet] = useState("");
   const [setImage, setImageSet] = useState("");
-  const mg =
-    "https://e7.pngegg.com/pngimages/96/604/png-clipart-mu-origin-mu-online-100-diamonds-video-game-relic-game-computer.png";
-  const dk =
-    "https://e7.pngegg.com/pngimages/96/604/png-clipart-mu-origin-mu-online-100-diamonds-video-game-relic-game-computer.png";
-  const dw =
-    "https://e7.pngegg.com/pngimages/96/604/png-clipart-mu-origin-mu-online-100-diamonds-video-game-relic-game-computer.png";
-  const dl =
-    "https://e7.pngegg.com/pngimages/96/604/png-clipart-mu-origin-mu-online-100-diamonds-video-game-relic-game-computer.png";
   const [allItemsBySet, setAllItemsBySet] = useState([]);
 
   useEffect(() => {
@@ -46,7 +38,7 @@ export default function SearchItems({ items }) {
           {allCharactersNoRepeat.map((character) => (
             <label
               key={character}
-              className="py-1 text-xl flex gap-2 hover:text-slate-300 cursor-pointer"
+              className="py-1 text-xl flex gap-2 text-slate-100 hover:text-slate-500 cursor-pointer"
             >
               <input
                 type="radio"
@@ -66,7 +58,7 @@ export default function SearchItems({ items }) {
           {uniqueSets.map((set) => (
             <label
               key={set}
-              className="p-2 text-xl flex gap-2 hover:text-slate-300 cursor-pointer"
+              className="p-2 text-xl flex gap-2 text-slate-100 hover:text-slate-500 cursor-pointer"
             >
               <input
                 type="radio"
