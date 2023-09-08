@@ -5,15 +5,25 @@
 
 
 @keyframes slide-left {
-    from {
-      transform: translateX(-100%);
-      opacity: 0
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1
-    }
+  from {
+    transform: translateX(-100%);
+    opacity: 0
   }
+  to {
+    transform: translateX(0);
+    opacity: 1
+  }
+}
+@keyframes slide-left-champ {
+  from {
+    transform: translateX(-100%);
+    opacity: 1
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.4
+  }
+}
   @keyframes slide-right {
     from {
       transform: translateX(100%);
@@ -34,13 +44,31 @@
       opacity:1
     }
   }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out 1s forwards;
+  }
   .animate-slide-left {
     animation: slide-left 2s ease-in-out;
+  }
+  .animate-slide-left-champ {
+    animation: slide-left-champ 1s ease-in-out;
   }
   .animate-slide-right {
     animation: slide-right 2s ease-in-out;
   }
   .animate-slide-down {
     animation: slide-down 2s ease-in-out;
+  }
+
+  .square { 
+    clip-path: polygon(30% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%, 0% 30%);
   }

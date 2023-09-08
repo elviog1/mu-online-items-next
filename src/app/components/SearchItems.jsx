@@ -99,7 +99,7 @@ export default function SearchItems({ items }) {
               />
             </div>
           ) : (
-            <img className="w-80 h-80" src={setImage} />
+            <img className="w-80 h-80 square  p-1" src={setImage} />
           )}
         </div>
         <div className="flex flex-wrap justify-evenly gap-5 my-5">

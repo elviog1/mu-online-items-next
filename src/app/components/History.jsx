@@ -14,6 +14,7 @@ export default function History() {
           mazmorras y la interacción con otros jugadores.
         </p>
       </div>
+      
     </section>
   );
 }
