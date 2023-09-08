@@ -3,7 +3,7 @@ import History from "./components/History";
 
 export default function Home() {
   return (
-    <main className="bg-slate-950">
+    <main className="bg-slate-950 font-serif">
       <Banner />
       <History />
     </main>

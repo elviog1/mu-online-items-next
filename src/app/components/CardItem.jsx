@@ -62,9 +62,9 @@ export default function CardItem({ item }) {
           -
         </button>
       </div>
-      <div className="w-80 font-bold text-white bg-opacity-90 bg-zinc-950 flex gap-5 flex-col text-center">
+      <div className="w-80 font-bold rounded-t-md text-white bg-opacity-90 bg-zinc-950 flex gap-5 flex-col text-center">
         <div className="">
-          <img className="w-80 h-52" src={item.image.filter(i => i.level >= level)[0].url} />
+          <img className="w-80 h-52 rounded-md border-8 bg-neutral-950 border-double border-neutral-700" src={item.image.filter(i => i.level >= level)[0].url} />
         </div>
         <div>
           <h3 className="font-bold text-green-500">
