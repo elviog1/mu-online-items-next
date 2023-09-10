@@ -1,16 +1,18 @@
+import { Suspense } from "react";
 import SearchItems from "../components/SearchItems";
-
-async function loadItems(){
-  const res = await fetch('http://localhost:4011/items')
-  const data = await res.json()
- return data
+async function loadItems() {
+  const res = await fetch(process.env.API + "/items");
+  const data = await res.json();
+  return data;
 }
 
 export default async function SetsPage() {
-  const items = await loadItems()
+  const items = await loadItems();
   return (
     <section className="">
-      <SearchItems items={items} />
+      <Suspense fallback={<p>cargando</p>}>
+        <SearchItems items={items} />
+      </Suspense>
     </section>
   );
 }
