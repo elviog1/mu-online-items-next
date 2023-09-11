@@ -3,7 +3,7 @@ import CharactersCard from "./CharactersCard";
 
 
 async function loadCharacter() {
-  const res = await fetch(process.env.API + "/characters");
+  const res = await fetch("http://localhost:4016" + "/characters");
   const data = await res.json();
   return data;
 }
