@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import SearchItems from "../components/SearchItems";
 async function loadItems() {
-  const res = await fetch("http://localhost:4016" + "/items");
+  const res = await fetch(process.env.API + "/items");
   const data = await res.json();
   return data;
 }

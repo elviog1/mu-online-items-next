@@ -2,13 +2,13 @@ import SetItems from "@/app/components/SetItems";
 import UpgradeItem from "@/app/components/UpgradeItem";
 
 async function loadItem(id) {
-  const res = await fetch("http://localhost:4016"+ `/items/${id}`);
+  const res = await fetch(process.env.API + `/items/${id}`);
   const data = await res.json();
   return data;
 }
 
 async function loadSetItem() {
-  const res = await fetch("http://localhost:4016" +`/items/`);
+  const res = await fetch(process.env.API +`/items/`);
   const data = await res.json();
   return data;
 }
