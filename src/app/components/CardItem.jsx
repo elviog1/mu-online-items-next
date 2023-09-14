@@ -62,16 +62,16 @@ export default function CardItem({ item }) {
           -
         </button>
       </div>
-      <div className="w-80 font-bold rounded-t-md text-white bg-opacity-80 bg-zinc-950 flex gap-5 flex-col text-center">
-        <div className="">
-          <img className="w-80 h-52 rounded-md border-8 bg-neutral-900 border-double border-neutral-950" src={item.image.filter(i => i.level >= level)[0].url} />
+      <div className="md:w-80 font-bold rounded-t-md text-white bg-opacity-80 bg-zinc-950 flex gap-5 flex-col text-center">
+        <div className="md:w-80">
+          <img className="w-full  rounded-md border-8 bg-neutral-900 border-double border-neutral-950" src={item.image.filter(i => i.level >= level)[0].url} />
         </div>
         <div>
           <h3 className="font-bold text-green-500">
             {item.name} {level > 0 ? `+${level}` : ""}
           </h3>
         </div>
-        <div>
+        <div className="text-sm">
           <h3 className="text-blue-700">Armor: {defense}</h3>
           <h3>
             Durability: [{item.durability}/{item.durability}]
