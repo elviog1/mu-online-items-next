@@ -12,7 +12,7 @@ export default function Platform() {
             Servidor Cruzado y Plataforma
           </h2>
           <div className="w-1/2">
-            <h2 className="text-center text-2xl">
+            <h2 className="text-center md:text-2xl">
               El juego se puede jugar tanto en PC como en dispositivos móviles.
               El progreso del juego se sincronizará en todas las plataformas y
               los jugadores tendrán acceso a todas las funciones del juego sin

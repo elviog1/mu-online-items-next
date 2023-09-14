@@ -27,7 +27,7 @@ export default async function ItemPage({ params }) {
     <div className="bg-gradient-to-b from-slate-800  to-slate-950 pt-20">
       <div className="container mx-auto ">
         <h1 className="text-center py-5 text-3xl font-bold text-slate-300">Set {setName}</h1>
-        <div className="flex justify-around">
+        <div className="flex flex-wrap gap-4 justify-around">
           {allSetByItem.map((set) => (
             <SetItems key={set.name} item={set} />
           ))}

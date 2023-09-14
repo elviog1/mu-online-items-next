@@ -21,7 +21,7 @@ export default function Navbar() {
               Items
             </li>
           </Link>
-        </ul>
+  </ul>
       </div>
     </nav>
   );

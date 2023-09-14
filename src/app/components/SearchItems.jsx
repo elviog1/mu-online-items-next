@@ -28,10 +28,10 @@ export default function SearchItems({ items }) {
   const uniqueSets = [...new Set(setsForSelectedCharacter)];
 
   return (
-    <div className="flex overflow-hidden">
-      <div className="w-64 pl-3 bg-gradient-to-b from-slate-800  to-slate-950  pt-20 ">
-        <form className="flex flex-col">
-          <h3 className="text-center text-2xl text-slate-300 font-bold">
+    <div className="md:flex bg-gradient-to-b from-slate-800  to-slate-950">
+      <div className="md:w-64 pl-3  pt-20 ">
+        <form className="flex md:items-start justify-center items-center gap-5 flex-wrap md:flex-col">
+          <h3 className="text-center w-full text-2xl text-slate-300 font-bold">
             Clases
           </h3>
 
@@ -51,7 +51,7 @@ export default function SearchItems({ items }) {
             </label>
           ))}
           {uniqueSets.length > 0 && (
-            <h3 className="text-center py-2 text-2xl text-slate-300 font-bold">
+            <h3 className="text-center w-full py-2 text-2xl text-slate-300 font-bold">
               Sets
             </h3>
           )}
@@ -72,14 +72,14 @@ export default function SearchItems({ items }) {
           ))}
         </form>
       </div>
-      <div className=" w-full bg-gradient-to-b from-slate-800  to-slate-950 pt-10">
+      <div className=" w-full  pt-10">
         <h2 className="text-center py-5 font-bold text-slate-200 text-4xl">
           {" "}
           {selectedSet && "Set " + selectedSet}
         </h2>
         <div className="flex justify-center">
           {setImage === "" ? (
-            <div className="flex justify-center  ">
+            <div className="flex justify-center overflow-x-auto  ">
               <img
                 className="w-80 h-80 animate-slide-left object-contain"
                 src="https://i.imgur.com/0AhoL9c.png"
@@ -99,10 +99,10 @@ export default function SearchItems({ items }) {
               />
             </div>
           ) : (
-            <img className="w-80 h-80 square  p-1" src={setImage} />
+            <img className="md:w-80 w-40 md:h-80 h-40 square  p-1" src={setImage} />
           )}
         </div>
-        <div className="flex flex-wrap justify-evenly gap-5 my-5">
+        <div className="flex flex-wrap justify-evenly gap-5 py-5">
           {allItemsBySet.map((item) => (
             <SetItems item={item} key={item.name} />
           ))}
